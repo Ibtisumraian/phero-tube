@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--* fav icon -->
+    <link rel="icon" type="imahe/x-icon" href="./assets/Group 25.png">
+    <title>Phero Tube</title>
+
+    <!--* DaisyUI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!--* styles -->
+     <style>
+      .active{
+         background-color: #FF1F3D;
+         color: white;
+      }
+     </style>
+</head>
+<body>
+    <!--* header section -->
+    <header>
+        <!--* navigation section -->
+         <section>
+            <!--* navigation container -->
+            <nav class="flex justify-between items-center w-10/12 mx-auto py-8 border-b border-[#17171720]">
+                <!--* nav img -->
+                 <div>
+                    <img src="./assets/Logo.png" alt="">
+                 </div>
+
+                 <!--* search input -->
+                 <label class="input">
+                    <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></g></svg>
+                    <input id="search-bar" type="search" required placeholder="Search"/>
+                  </label>
+
+                 <!--* sorted button -->
+                  <button class="btn bg-gray-300 ">Sort By View</button>
+
+                  <!--* blogs -->
+                   <button id="subscribe-btn" class="btn bg-[#FF1F3D] text-white text-base">subscribe</button>
+            </nav>
+         </section>
+    </header>
+    
+    <!--* main section -->
+    <main>
+        <!--* main navigation sectoon -->
+         <nav class="w-10/12 mx-auto">
+            <div class="flex justify-center items-center gap-3 py-5">
+                <button onclick="loadVedios()" id="all-btn" class="btn bg-gray-300 px-6 text-base">All</button>
+                
+                <!--* dinamic button secton -->
+                 <div id="categorie-container" class="flex justify-center items-center gap-3">
+                   
+                    <!--* -------------------------- -->
+
+                    <!-- *modal -->
+                     <!-- * Open the modal using ID.showModal() method -->
+                  <!-- <button class="btn" onclick="my_modal_2.showModal()">open modal</button> -->
+                  <dialog id="my_modal_2" class="modal">
+                     <div class="modal-box">
+                        <h3 class="text-lg font-bold">Hello!</h3>
+                        <p class="py-4">Press ESC key or click outside to close</p>
+                     </div>
+                     <form method="dialog" class="modal-backdrop">
+                        <button>close</button>
+                     </form>
+                  </dialog>
+
+                 </div>
+
+            </div>
+         </nav>
+
+         <!--* vedio section -->
+          <section class="w-10/12 mx-auto">
+
+            <!-- * koading section -->
+             <div id="leading-bar" class="hidden my-6">
+               <!-- <span class="loading loading-dots loading-md"></span>
+               <span class="loading loading-dots loading-md"></span>
+               <span class="loading loading-dots loading-md"></span> -->
+               <div class="flex justify-center items-center">
+
+                  <span class="loading loading-dots loading-xl"></span>
+                  <span class="loading loading-dots loading-xl"></span>
+               </div>
+              
+             </div>
+
+            <!--* video container -->
+            <div id="video-container" class="grid grid-cols-4 gap-8 mt-6">
+                
+            <!--* ------------------------------- -->
+             <!--* no video alart -->
+              <div class="col-span-full flex flex-col justify-center items-center mt-28">
+               <img class="w-44" src="./assets/Icon.png" alt="">
+               <p class="text-3xl font-semibold">Oops!!! Sorry, There is no content here</p>
+              </div>
+            </div>
+          </section>
+    </main>
+
+    <!--* footer section -->
+     <footer>
+
+     </footer>
+
+     <!--* Script section -->
+      <script src="./script/script.js"></script>
+</body>
+</html>
